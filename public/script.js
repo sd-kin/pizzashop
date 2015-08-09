@@ -1,6 +1,8 @@
 function sayhello()
 {
-localStorage.setItem('bgcolor', 'red');
-var x = localStorage.getItem('bgcolor');
+var x = window.localStorage.getItem('csa');
+
+x=x*1+1;
+window.localStorage.setItem('csa', x);
 alert (x);
 }
