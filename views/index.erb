@@ -9,6 +9,16 @@
 
 <h2>Index page</h2>
 <button class="btn btn-primary" onclick="sayhello()">script</button>
+
+<div class="row">
+<%@products.each do |product|%>
+  <div class="col-md-4">
+	<h3><%=product.title%></h3>
+	<img width="350" height="250" src="<%=product.path_to_image%>"/>
+	<h5><%=product.description%></h5>
+  </div>
+ <%end%>
+</div>
 </body>
 
 </html>
