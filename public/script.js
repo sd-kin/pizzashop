@@ -8,5 +8,8 @@ alert (x);
 }
 
 function addToCart(id) {
-	alert("you added id:"+id);
+	var x = window.localStorage.getItem('product_'+id);
+	x=x*1+1;
+	window.localStorage.setItem('product_'+id, x);
+	alert('you add '+x+' items of '+ id);
 }
