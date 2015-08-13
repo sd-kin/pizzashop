@@ -16,6 +16,7 @@
 	<h3><%=product.title%></h3>
 	<img width="350" height="250" src="<%=product.path_to_image%>"/>
 	<h5><%=product.description%></h5>
+	<button class="btn-sm btn-success" onclick="addToCart(<%= product.id%>)">Add to cart</button>
   </div>
  <%end%>
 </div>
