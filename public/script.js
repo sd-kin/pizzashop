@@ -14,7 +14,7 @@ function addToCart(id) {
 	alert('you add '+x+' items of '+ id);
 }
 
-function showCa  rt() {
+function showCart() {
 var items = []
 for (var i = 0; i < localStorage.length; i++){
 items.push(localStorage.getItem(localStorage.key(i))+" items", " of id #"+localStorage.key(i));
@@ -25,4 +25,19 @@ alert(items);
 function clearCart() {
 	
 	localStorage.clear();
+}
+
+
+function cart_get_number_of_items()
+{
+var cnt=0;
+for (var i = 0; i < localStorage.length; i++) 
+	{
+	var key = window.localStorage.key(i);
+	var value = window.localStorage.getItem(key);
+	if(key.indexOf('product_') == 0)
+		{
+		cnat = cnt + value*1;
+		}
+	}
 }

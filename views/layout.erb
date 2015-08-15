@@ -36,7 +36,13 @@
 			    </ul>
 				
 				<ul class="nav navbar-right">
-				<li><a href="">Cart(..)</a></li>
+				
+					<li>
+						<form action="/cart" method="POST">
+						<input type="text" name="cart"/>
+						<input type="submit" class="btn btn-primary" value="Cart(..)" />
+						</form>
+					</li>
 				</ul>
 			  </div><!--/.nav-collapse -->
 			</nav>
