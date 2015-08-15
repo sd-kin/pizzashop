@@ -1,0 +1,41 @@
+<!DOCTYPE=html>
+
+<html>
+<head>
+<script src="/vendor/jquery-1.9.1.min.js"></script>
+<script type ="text/javascript">
+$(function(){
+update();
+button_text();
+});
+</script>
+</head>
+
+<body>
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product</th>
+          <th>Number</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+
+<%@result.each do |item|%>
+        <tr>
+          <th scope="row"><%=item[:count]%></th>
+          <td><%=item[:name]%></td>
+          <td><%=item[:number]%></td>
+          <td><%=item[:price]%></td>
+		 
+        </tr>
+<%end%>  
+
+      </tbody>
+    </table>
+	Total price = <%=@tprice%>   
+</body>
+
+</html>
