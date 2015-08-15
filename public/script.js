@@ -14,7 +14,7 @@ function addToCart(id) {
 	alert('you add '+x+' items of '+ id);
 }
 
-function showCart() {
+function showCa  rt() {
 var items = []
 for (var i = 0; i < localStorage.length; i++){
 items.push(localStorage.getItem(localStorage.key(i))+" items", " of id #"+localStorage.key(i));
