@@ -35,7 +35,15 @@ button_text();
 
       </tbody>
     </table>
-	Total price = <%=@tprice%>   
+	Total price = <%=@tprice%>  
+	
+<div>
+<form action="/order" method="get" style="display: inline-block">	
+<button class = "btn btn-primary" onclick="">Order</button>
+</form>
+<form action="/" method="get" style="display: inline-block">
+<button class = "btn btn-primary" onclick="clearCart()">Cansel</button>
+</div>
 </body>
 
 </html>
