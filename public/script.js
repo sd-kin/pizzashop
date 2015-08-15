@@ -68,6 +68,7 @@ function update()
 {
 var orders = cart_get_orders()
 $('#orders_input').val(orders);
+$('#orders_input1').val(orders);
 }
 
 function button_text()

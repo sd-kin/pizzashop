@@ -7,6 +7,7 @@
 $(function(){
 update();
 button_text();
+
 });
 </script>
 </head>
@@ -15,18 +16,21 @@ button_text();
 <form action='/order' method='post' >
 	<div class="form-group">
 		<label for="exampleInputEmail1">Name</label>
-		<input type="input" class="form-control" id="exampleInputEmail1" placeholder="Name">
+		<input type="input" class="form-control" name="order[name]" placeholder="Name">
 	</div>
 	
 	<div class="form-group">
 		<label for="exampleInputEmail1">Phone number</label>
-		<input type="input" class="form-control" id="exampleInputEmail1" placeholder="8 88 888 88">
+		<input type="input" class="form-control" name="order[phone]" placeholder="8 88 888 88">
 	</div>
 	
 	<div class="form-group">
 		<label for="exampleInputEmail1">Address</label>
-		<textarea class="form-control" rows="3"></textarea>
+		<textarea class="form-control" rows="3" name="order[address]"></textarea>
 	</div>
+	
+	<input type="hidden" name="order[order_body]" id="orders_input1"/>
+	
 	<button class="btn btn-primary">Order</button>
 </form>
 </body>

@@ -10,6 +10,10 @@ class Product<ActiveRecord::Base
 
 end
 
+class Order<ActiveRecord::Base
+
+end
+
 get '/' do
 @products=Product.all
 	erb :index		
@@ -41,5 +45,12 @@ erb :cart
 end
 
 get '/order' do
+@items = params['cart']
+erb :order
+end
+
+post '/order' do
+
+Order.create params[:order]
 erb :order
 end
