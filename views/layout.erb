@@ -39,8 +39,8 @@
 				
 					<li>
 						<form action="/cart" method="POST">
-						<input type="text" name="cart"/>
-						<input type="submit" class="btn btn-primary" value="Cart(..)" />
+						<input type="hidden" name="cart" id="orders_input"/>
+						<input id="cart_button" type="submit" class="btn btn-primary" value="Cart($(cart_get_number_of_items()))" />
 						</form>
 					</li>
 				</ul>
